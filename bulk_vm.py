@@ -69,7 +69,7 @@ class VM:
             env_demo=dict(prom_env="osl2-demo"),
             env_mig=dict(prom_env="osl2-mig"),
             env_sandbox=dict(prom_env="osl2-sandbox"),
-        )
+        ),
         aeu1=dict(
             env_inf=dict(prom_env="aeu1-inf"),
         )

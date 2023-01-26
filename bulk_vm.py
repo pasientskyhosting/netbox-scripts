@@ -24,8 +24,8 @@ class VM:
     comment: str
 
     DEFAULT_TAGS = ['ansible', 'zero_day']
-    DEFAULT_DOMAIN_PRIVATE = 'uniscale.zone'
-    DEFAULT_DOMAIN_PUBLIC = 'publicdns.zone'
+    DEFAULT_DOMAIN_PRIVATE = 'patientsky.zone'
+    DEFAULT_DOMAIN_PUBLIC = 'patientsky.dev'
     DEFAULT_PROM_ALERT_TYPE = '24-7-devops'
 
     PROMETHEUS_DICT = dict(
@@ -62,6 +62,14 @@ class VM:
             env_pno=dict(prom_env="psno"),
             env_ppt=dict(prom_env="ppt"),
         ),
+        osl2=dict(
+            env_dev=dict(prom_env="osl2-dev"),
+            env_qa=dict(prom_env="osl2-qa"),
+            env_stg=dict(prom_env="osl2-stg"),
+            env_demo=dict(prom_env="osl2-demo"),
+            env_mig=dict(prom_env="osl2-mig"),
+            env_sandbox=dict(prom_env="osl2-sandbox"),
+        )
         aeu1=dict(
             env_inf=dict(prom_env="aeu1-inf"),
         )

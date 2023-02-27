@@ -65,6 +65,7 @@ class VM:
         osl2=dict(
             env_dev=dict(prom_env="osl2-dev"),
             env_qa=dict(prom_env="osl2-qa"),
+            env_inf=dict(prom_env="osl2-inf"),
             env_stg=dict(prom_env="osl2-stg"),
             env_demo=dict(prom_env="osl2-demo"),
             env_mig=dict(prom_env="osl2-mig"),
@@ -438,8 +439,8 @@ class VM:
     def __prometheus_env_translator(self, env: Tag, site: Site):
         try:
             return self.PROMETHEUS_DICT[site.name][env.name].get('prom_env')
-        except Exception:
-            return env.split('_')[1]
+        except Exception as e:
+            raise Exception("Error while translating prometheus env - error: {0} env: {1} site: {2}".format(e, env, site))
 
     def __create_service(self, vm):
 

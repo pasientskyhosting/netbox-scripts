@@ -67,7 +67,7 @@ class VM:
             env_qa=dict(prom_env="qa"),
             env_inf=dict(prom_env="inf"),
             env_stg=dict(prom_env="stg"),
-            env_demo=dict(prom_env="demo"),
+            env_dmo=dict(prom_env="dmo"),
             env_mig=dict(prom_env="mig"),
             env_sandbox=dict(prom_env="sandbox"),
             env_psno=dict(prom_env="psno"),
